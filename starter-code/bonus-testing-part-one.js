@@ -26,7 +26,7 @@ TODO: Run this file in node
     to see what happens when the test fails, then change `ricksFaveAnimal`
     to get the test to pass!
 */
-var ricksFaveAnimal = 'hyena';
+var ricksFaveAnimal = 'penguin';
 
 expect(
   ricksFaveAnimal === 'penguin',
@@ -50,6 +50,7 @@ var nextAnimal;
       Assign one of your favorite animals dynamically by chance to the
       nextAnimal variable   :-)
       Your code begins on the next line: */
+nextAnimal = favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)];
 
   /* TODO:
       Write a test! Use the `expect()` function we defined earlier to ensure
@@ -58,3 +59,4 @@ var nextAnimal;
       just 'penguin').
       Remember to: pass in your expression, and write a failure and a success
       message. Your test begins on the next line: */
+expect(favoriteAnimals.indexOf(nextAnimal) !== -1, 'Those ' + nextAnimal + ' don\'t belong to favoriteAnimals!', nextAnimal + ' are in favoriteAnimals! CONGRATULATIONS!');
