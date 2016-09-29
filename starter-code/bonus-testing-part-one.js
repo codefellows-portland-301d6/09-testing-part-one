@@ -45,8 +45,11 @@ expect(
 
 var favoriteAnimals = ['elephants', 'penguins', 'eagles', 'camels'];
 var nextAnimal = favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)];
+function findAnimal(animal) {
+  return animal === nextAnimal;
+}
 expect(
-  nextAnimal === favoriteAnimals[0] || favoriteAnimals[1] || favoriteAnimals[2] || favoriteAnimals[3],
+  nextAnimal === favoriteAnimals.find(findAnimal),
   'Failure - your animal has not been added to the array.',
   'Success! nextAnimal = ' + nextAnimal
 );
