@@ -26,12 +26,12 @@ TODO: Run this file in node
     to see what happens when the test fails, then change `ricksFaveAnimal`
     to get the test to pass!
 */
-var ricksFaveAnimal = 'hyena';
+var ricksFaveAnimal = 'penguin';
 
-expect(
+/*expect(
   ricksFaveAnimal === 'penguin',
   'ricksFavoriteAnimal should equal penguin, but currently equals ' + ricksFaveAnimal,
-  'ricksFavoriteAnimal equals penguin!');
+  'ricksFavoriteAnimal equals penguin!');*/
 
   // BEGIN WORK BELOW - test code by running `node bonus-testing-part-one.js`
   //  in your terminal!
@@ -50,6 +50,8 @@ var nextAnimal;
       Assign one of your favorite animals dynamically by chance to the
       nextAnimal variable   :-)
       Your code begins on the next line: */
+var chance = Math.floor(Math.random() * favoriteAnimals.length);
+nextAnimal = favoriteAnimals[chance];
 
   /* TODO:
       Write a test! Use the `expect()` function we defined earlier to ensure
@@ -58,3 +60,11 @@ var nextAnimal;
       just 'penguin').
       Remember to: pass in your expression, and write a failure and a success
       message. Your test begins on the next line: */
+
+expect(
+    (favoriteAnimals.indexOf(nextAnimal) != -1),
+  'The next animal you visit should be a favorite animal, but it\'s ' + nextAnimal,
+  'The next animal you\'re visiting is a ' + nextAnimal + '. Awesome!!'
+);
+
+
