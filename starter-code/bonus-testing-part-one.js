@@ -45,6 +45,10 @@ expect(
 
 var favoriteAnimals = ['elephants', 'penguins', 'eagles', 'camels'];
 var nextAnimal;
+var animalIndex = Math.floor(Math.random() * (10-0)) + 0;
+var nextAnimal = favoriteAnimals[animalIndex];
+
+
 
   /* TODO:
       Assign one of your favorite animals dynamically by chance to the
@@ -58,3 +62,5 @@ var nextAnimal;
       just 'penguin').
       Remember to: pass in your expression, and write a failure and a success
       message. Your test begins on the next line: */
+
+expect(favoriteAnimals.indexOf(favoriteAnimals[nextAnimal]) === -1, 'not in array. nextAnimal equals ' + nextAnimal, 'success nextAnimal is ' + nextAnimal);
