@@ -26,7 +26,7 @@ TODO: Run this file in node
     to see what happens when the test fails, then change `ricksFaveAnimal`
     to get the test to pass!
 */
-var ricksFaveAnimal = 'hyena';
+var ricksFaveAnimal = 'penguin';
 
 expect(
   ricksFaveAnimal === 'penguin',
@@ -50,7 +50,12 @@ var nextAnimal;
       Assign one of your favorite animals dynamically by chance to the
       nextAnimal variable   :-)
       Your code begins on the next line: */
-
+var myFavoriteAnimal = function (favoriteAnimals) {
+  for (var i = 0; i < favoriteAnimals.length; i++) {
+    var randomIndexNumber = Math.floor(Math.random() * (favoriteAnimals[i] + 1));
+  };
+  return nextAnimal = favoriteAnimals[randomIndexNumber];
+};
   /* TODO:
       Write a test! Use the `expect()` function we defined earlier to ensure
       that an element in the favoriteAnimals array was assigned to nextAnimal.
@@ -58,3 +63,8 @@ var nextAnimal;
       just 'penguin').
       Remember to: pass in your expression, and write a failure and a success
       message. Your test begins on the next line: */
+expect(
+  nextAnimal === favoriteAnimals.forEach(function(item) {return item;}),
+  'nextAnimal should equal an item from favoriteAnimals but does not',
+  'nextAnimal equals and animal from favoriteAnimals'
+);
